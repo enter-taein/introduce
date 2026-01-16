@@ -1,5 +1,5 @@
+import { Link } from "react-router";
 import type { Route } from "./+types/home";
-import { Welcome } from "../welcome/welcome";
 
 export function meta({}: Route.MetaArgs) {
   return [
@@ -9,5 +9,14 @@ export function meta({}: Route.MetaArgs) {
 }
 
 export default function Home() {
-  return <Welcome />;
+  return (
+    <section>
+      <h1>Home</h1>
+      <p>소개 사이트 메인입니다.</p>
+      <div>
+        <Link to="/projects">프로젝트 보기</Link>
+        <Link to="/contact">연락하기</Link>
+      </div>
+    </section>
+  );
 }
